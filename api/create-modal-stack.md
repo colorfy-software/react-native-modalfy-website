@@ -2,7 +2,7 @@
 title: createModalStack
 ---
 
-# create-modal-stack
+# createModalStack
 
 This is probably the core feature of the library \(especially [transitionOptions](create-modal-stack.md#transitionoptions) 😉\). `createModalStack` is a function that's going to turn your config into a usable stack.
 

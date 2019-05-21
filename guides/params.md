@@ -2,7 +2,7 @@
 title: Passing params
 ---
 
-# params
+# Passing params
 
 Thanks to React, we can reuse the same component over and over again. You might want to do the same thing with your modals: calling different modals \(using different keys then\), but rendering the same React component under the hood. Being able to know in which context that component was called is a major key to success, hence the `params`!
 

@@ -2,7 +2,7 @@
 title: Modal prop reference
 ---
 
-# modal-prop
+# Modal prop
 
 Every modal component you added in your modal stack \(see [`createModalStack`](create-modal-stack.md)\) receives the `modal` prop automatically:
 

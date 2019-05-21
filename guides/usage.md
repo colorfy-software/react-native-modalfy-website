@@ -2,7 +2,7 @@
 title: Opening & closing
 ---
 
-# usage
+# Opening & closing
 
 As soon as your modal stack is setup, you can start using React Native Modalfy from wherever you want -in your code. You'll have 2 different ways to do so, depending on your context: either if you're inside a modal component or anywhere else in the code.
 

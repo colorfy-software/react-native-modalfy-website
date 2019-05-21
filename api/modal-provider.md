@@ -2,7 +2,7 @@
 title: ModalProvider
 ---
 
-# modal-provider
+# ModalProvider
 
 This is the component you'll use to pass your modals stack to React Native Modalfy. Place `ModalProvider` at the root component of your app and put all the components you had inside of it.
 

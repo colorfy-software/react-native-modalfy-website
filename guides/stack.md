@@ -2,7 +2,7 @@
 title: Creating a stack
 ---
 
-# stack
+# Creating a stack
 
 You'll need to use 2 things to get up and running with React Native Modalfy: `ModalProvider`, which is going to wrap your whole application in order to be able to display your modals on top of everything. Then we have `createModalStack`, we'll use to create the stack `ModalProvider` needs to work as expected.
 

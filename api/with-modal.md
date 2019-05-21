@@ -2,7 +2,7 @@
 title: withModal
 ---
 
-# with-modal
+# withModal
 
 `withModal` is a HOC \([Higher Order Component](https://reactjs.org/docs/higher-order-components.html)\) which passes the `modal` prop into a wrapped component. The function receives a component and outputs another one with the new prop. It's useful when you don't have access to the `modal` prop into the component, or don't want to pass it in case of a deeply nested child.
 
