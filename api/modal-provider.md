@@ -9,7 +9,7 @@ This is the component you'll use to pass your modals stack to React Native Modal
 ```javascript
 import React from 'react'
 import { Text, View } from 'react-native'
-import { ModalProvider } from 'react-navigation'
+import { ModalProvider } from 'react-native-modalfy'
 
 class App extends React.Component {
   render() {

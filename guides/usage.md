@@ -49,7 +49,7 @@ we can call `openModal('NoConnection')`, `openModal('MessageSent')`, etc.
 
 ## From anywhere in your code
 
-This use case is probably more common than the 1st one: you're in a screen component and you want to open a modal from there. To do so, we'll use `withModal` higher-order component to add the same `modal` we just saw to your component props:
+This use case is probably more common than the 1st one: you're in a screen component and you want to open a modal from there. To do so, we'll use [`withModal`](../api/with-modal.md) higher-order component \(or [`useModal`](../api/usemodal.md) hook\) to access the same `modal` we just saw:
 
 ```javascript
 import React from 'react'

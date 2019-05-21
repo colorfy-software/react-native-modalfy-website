@@ -11,7 +11,7 @@ title: withModal
 ```javascript
 import React, { Component } from 'react'
 import { Button, Text } from 'react-native'
-import { withModal } from '@colorfy-software/react-native-modalfy'
+import { withModal } from 'react-native-modalfy'
 
 class ProfileScreen extends Component {
   render() {

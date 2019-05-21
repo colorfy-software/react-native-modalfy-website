@@ -15,7 +15,7 @@ Simply find your app root's component and put its current content inside `ModalP
 
 import React from 'react'
 import { Text, View } from 'react-native'
-import { ModalProvider } from 'react-navigation'
+import { ModalProvider } from 'react-native-modalfy'
 
 class App extends React.Component {
   render() {
@@ -39,7 +39,7 @@ You can be working on a more complex application with a lot of providers already
 import React from 'react'
 import { ApolloProvider } from 'react-apollo'
 import { Provider } from 'react-redux'
-import { ModalProvider } from 'react-navigation'
+import { ModalProvider } from 'react-native-modalfy'
 
 import Navigation from '@navigation'
 import reduxStore from '@redux'
@@ -70,7 +70,7 @@ For this step we'll use `createModalStack` and pass its output to `ModalProvider
 
 ```javascript
 import React from 'react'
-import { ModalProvider } from 'react-navigation'
+import { ModalProvider } from 'react-native-modalfy'
 
 import Navigation from '@navigation'
 import { ErrorModal } from '@components/Modals'

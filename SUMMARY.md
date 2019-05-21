@@ -11,6 +11,7 @@
   * [ModalProvider](api/modal-provider.md)
   * [createModalStack](api/create-modal-stack.md)
   * [withModal](api/with-modal.md)
+  * [useModal](api/usemodal.md)
 * [Help](help.md)
 * [Contributing](contributing.md)
 * [Changelog](https://github.com/colorfy-software/react-native-modalfy/releases)
