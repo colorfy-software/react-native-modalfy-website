@@ -13,5 +13,10 @@
   * [withModal](api/with-modal.md)
 * [Help](help.md)
 * [Contributing](contributing.md)
+* [Blog](https://colorfy-software.gitbook.io/react-native-modalfy/blog)
 * [Changelog](https://github.com/colorfy-software/react-native-modalfy/releases)
+
+## Blog
+
+* [Introducing a Modal Citizen](blog/introducing-a-modal-citizen.md)
 
