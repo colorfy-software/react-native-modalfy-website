@@ -2,7 +2,9 @@
 title: Modal prop reference
 ---
 
-Every modal component you added in your modal stack (see [`createModalStack`](create-modal-stack.md)) receives the `modal` prop automatically:
+# modal-prop
+
+Every modal component you added in your modal stack \(see [`createModalStack`](create-modal-stack.md)\) receives the `modal` prop automatically:
 
 * `this.props.modal`
   * `currentModal`: name of the current displayed modal if there's one,
@@ -17,25 +19,25 @@ Be aware that only components in you modal stack do receive this prop. If you're
 
 ### `currentModal` - Get the currently displayed modal's name
 
-```js
+```javascript
 // type currentModal = ?ModalName
 const { currentModal }  = this.props.modal
 ```
 
-Returns the name of the current modal, `null` if none is currently displayed or if you're displaying several modals, the name of the one on top of the stack (currently shown to the user).
+Returns the name of the current modal, `null` if none is currently displayed or if you're displaying several modals, the name of the one on top of the stack \(currently shown to the user\).
 
-> Note: The "name of the current modal" refers to the key you used for that specific modal in the modal configuration object you used in [`createModalStack`](create-nodal-statck).
+> Note: The "name of the current modal" refers to the key you used for that specific modal in the modal configuration object you used in [`createModalStack`](https://github.com/colorfy-software/react-native-modalfy-website/tree/ba1aacf00d590bad4c078b8a776e82da019b2201/api/create-nodal-statck/README.md).
 
 ### `openModal` - Open a modal
 
-```js
+```javascript
 // type currentModal = (modalName: ModalName, params?: Object) => void
 const { openModal } = this.props.modal
 ```
 
 Use this to open any modal you've setup.
 
-```js
+```javascript
 import React from 'react'
 import { Button, Text, View } from 'react-native'
 
@@ -65,14 +67,14 @@ export default Message
 
 ### `closeModal` - close a modal
 
-```js
+```javascript
 // type closeModal = () => void,
 const { closeModal }  = this.props.modal
 ```
 
-This functions closes a modal. Depending on your modal stack configuration it will either: close the first modal in your stack or clear the whole stack (see [createModalStack](create-modal-stack.md)).
+This functions closes a modal. Depending on your modal stack configuration it will either: close the first modal in your stack or clear the whole stack \(see [createModalStack](create-modal-stack.md)\).
 
-```js
+```javascript
 import React from 'react'
 import { Button, Text, View } from 'react-native'
 
@@ -93,14 +95,12 @@ export default ErrorModal
 
 ### `getParams` - get a specific modal params
 
-```js
+```javascript
 // type getParams = (modalName: ModalName, fallback?: any) => any
 const { getParams }  = this.props.modal
 ```
 
-<!-- One of the two ways to access a modal params. This function lets you query the params you setup for a specific modal, with an optional fallback option if needed. The fallback - as well as `params` - can be any type of data (even though using objects might be the most common thing to do). -->
-
-```js
+```javascript
 import React from 'react'
 import { Button, Text, View } from 'react-native'
 
@@ -123,12 +123,12 @@ export default ErrorModal
 
 ### `params` - current modal's params
 
-```js
+```javascript
 // type params = any
 const { params }  = this.props.modal
 ```
 
-```js
+```javascript
 import React from 'react'
 import { Button, Text, View } from 'react-native'
 
@@ -150,4 +150,5 @@ export default WelcomeBackModal
 
 This is the other way to access a modal's params. Here you'll directly have access to the data you passed.
 
-> Note: If you're outside a modal component (aka you used `withModal`) you won't have any `params` key in `this.props.modal`. Prefer using `getParams` if you really need that info.
+> Note: If you're outside a modal component \(aka you used `withModal`\) you won't have any `params` key in `this.props.modal`. Prefer using `getParams` if you really need that info.
+
