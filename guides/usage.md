@@ -1,5 +1,4 @@
 ---
-id: usage
 title: Opening & closing
 ---
 

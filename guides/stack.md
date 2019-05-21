@@ -1,5 +1,4 @@
 ---
-id: stack
 title: Creating a stack
 ---
 

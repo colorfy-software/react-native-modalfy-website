@@ -1,5 +1,4 @@
 ---
-id: modal-provider
 title: ModalProvider
 ---
 

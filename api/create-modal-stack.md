@@ -1,5 +1,4 @@
 ---
-id: create-modal-stack
 title: createModalStack
 ---
 

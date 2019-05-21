@@ -1,5 +1,4 @@
 ---
-id: params
 title: Passing params
 ---
 

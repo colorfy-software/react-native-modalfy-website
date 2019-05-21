@@ -1,5 +1,4 @@
 ---
-id: with-modal
 title: withModal
 ---
 
