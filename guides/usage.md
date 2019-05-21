@@ -4,7 +4,7 @@ title: Opening & closing
 
 # Opening & closing
 
-As soon as your modal stack is setup, you can start using React Native Modalfy from wherever you want -in your code. You'll have 2 different ways to do so, depending on your context: either if you're inside a modal component or anywhere else in the code.
+As soon as your modal stack is setup, you can start using React Native Modalfy from wherever you want in your code. You'll have 2 different ways to do so, depending on your context: either if you're inside a modal component or anywhere else in the code.
 
 ## From a modal component
 
@@ -32,7 +32,7 @@ class ErrorModal extends React.Component {
 export default ErrorModal
 ```
 
-You'll notice that in order to open a modal, React Native Modalfy uses the keys we put inside `modalConfig`. So if your config looks like:
+You'll notice that in order to open a modal, React Native Modalfy uses the keys we put inside `modalConfig`. So if our config looks like:
 
 ```javascript
 import { ErrorModal, MessageSentModal } from '@components/Modals'
@@ -49,7 +49,7 @@ we can call `openModal('NoConnection')`, `openModal('MessageSent')`, etc.
 
 ## From anywhere in your code
 
-This use case is probably more common thant the 1st one: you're in a screen component and you want to open a modal from there. To do so, we'll use `withModal` higher-order component to add the same `modal` we just saw to your component props:
+This use case is probably more common than the 1st one: you're in a screen component and you want to open a modal from there. To do so, we'll use `withModal` higher-order component to add the same `modal` we just saw to your component props:
 
 ```javascript
 import React from 'react'
@@ -79,5 +79,7 @@ class Message extends React.Component {
 export default Message
 ```
 
-> Have a look at [Modal prop](https://github.com/colorfy-software/react-native-modalfy-website/tree/ba1aacf00d590bad4c078b8a776e82da019b2201/guides/modal-prop.md) API reference to see all the things you can perform with `openModal` and have a complete overview of what does `modal` bring with it.
+{% hint style="info" %}
+Have a look at [Modal prop](https://github.com/colorfy-software/react-native-modalfy-website/tree/ba1aacf00d590bad4c078b8a776e82da019b2201/guides/modal-prop.md) API reference to see all the things you can perform with `openModal` and have a complete overview of what does `modal` bring with it.
+{% endhint %}
 

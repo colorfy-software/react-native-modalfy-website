@@ -5,13 +5,13 @@ title: Installation
 
 # Installation
 
-You'll just need to install the `@colorfy-software/react-native-modalfy` package in your React Native project.
+First, install the `react-native-modalfy` package in your React Native project.
 
 ```text
-yarn add @colorfy-software/react-native-modalfy
+yarn add react-native-modalfy
 # or use npm
-# npm install --save @colorfy-software/react-native-modalfy
+# npm install --save react-native-modalfy
 ```
 
-And that's it, no further action needed. Now you can move onto actually using the library through the modal stack!
+And that's it! No further action needed. Now you can move onto actually using the library through the modal stack!
 

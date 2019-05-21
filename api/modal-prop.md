@@ -7,13 +7,13 @@ title: Modal prop reference
 Every modal component you added in your modal stack \(see [`createModalStack`](create-modal-stack.md)\) receives the `modal` prop automatically:
 
 * `this.props.modal`
-  * `currentModal`: name of the current displayed modal if there's one,
-  * `openModal`: open a specific modal,
-  * `closeModal`: close a modal,
-  * `getParams`: get a specific modal params with fallback,
+  * `currentModal`: name of the current displayed modal if there's one
+  * `openModal`: open a specific modal
+  * `closeModal`: close a modal
+  * `getParams`: get a specific modal params with fallback
   * `params`: current modal's params
 
-Be aware that only components in you modal stack do receive this prop. If you're looking for how to access the `modal` prop from any component, head to [`withModal`](with-modal.md) HOC section.
+Be aware that only components in you modal stack do receive this prop. If you're looking for how to access the `modal` prop from any component, head to [`withModal`](with-modal.md) section.
 
 ## API reference
 
@@ -26,7 +26,9 @@ const { currentModal }  = this.props.modal
 
 Returns the name of the current modal, `null` if none is currently displayed or if you're displaying several modals, the name of the one on top of the stack \(currently shown to the user\).
 
-> Note: The "name of the current modal" refers to the key you used for that specific modal in the modal configuration object you used in [`createModalStack`](https://github.com/colorfy-software/react-native-modalfy-website/tree/ba1aacf00d590bad4c078b8a776e82da019b2201/api/create-nodal-statck/README.md).
+{% hint style="info" %}
+Note: The "name of the current modal" refers to the key you used for that specific modal in the modal configuration object you used in [`createModalStack`](https://github.com/colorfy-software/react-native-modalfy-website/tree/ba1aacf00d590bad4c078b8a776e82da019b2201/api/create-nodal-statck/README.md).
+{% endhint %}
 
 ### `openModal` - Open a modal
 
@@ -119,7 +121,9 @@ class ErrorModal extends React.Component {
 export default ErrorModal
 ```
 
-> Note: If you're inside a modal component, you'd probably want to use `params` instead. `getParams` shines when you want to access a specific modal params outside of its component.
+{% hint style="info" %}
+Note: If you're inside a modal component, you'd probably want to use `params` instead. `getParams` shines when you want to access a specific modal params outside of its component.
+{% endhint %}
 
 ### `params` - current modal's params
 
@@ -150,5 +154,7 @@ export default WelcomeBackModal
 
 This is the other way to access a modal's params. Here you'll directly have access to the data you passed.
 
-> Note: If you're outside a modal component \(aka you used `withModal`\) you won't have any `params` key in `this.props.modal`. Prefer using `getParams` if you really need that info.
+{% hint style="info" %}
+Note: If you're outside a modal component \(aka you used `withModal`\) you won't have any `params` key in `this.props.modal`. Prefer using `getParams` if you really need that info.
+{% endhint %}
 
