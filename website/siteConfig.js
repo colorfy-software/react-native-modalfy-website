@@ -14,15 +14,14 @@ const siteConfig = {
     { doc: 'api-reference', label: 'API' },
     { href: examplesUrl, label: 'Examples' },
     { blog: true, label: 'Blog' },
-    { href: repoUrl, label: 'GitHub'},
-    { search: true }
+    { href: repoUrl, label: 'GitHub'}
   ],
   headerIcon: 'img/favicon.png',
   footerIcon: 'img/favicon.png',
   favicon: 'img/favicon.png',
   colors: {
     primaryColor: '#ffca7d',
-    secondaryColor: '#ffab31',
+    secondaryColor: '#333ddd',
   },
   copyright: `Copyright © ${new Date().getFullYear()} · Colorfy GmbH`,
   highlight: {

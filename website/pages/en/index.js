@@ -149,20 +149,19 @@ class Index extends React.Component {
       <Block layout="fourColumn" background="light">
         {[
           {
-            // image: `${baseUrl}img/undraw_react.svg`,
-            // imageAlign: 'top',
-            title: '1',
+            imageAlign: 'top',
+            title: 'Animations friendly',
             content: 'This is the content of the feature',
           },
           {
-            // imageAlign: 'top',
+            imageAlign: 'top',
             title: '2',
             content: 'The content of another feature',
           },
           {
-            // imageAlign: 'top',
-            title: '3',
-            content: 'The content of one last feature',
+            imageAlign: 'top',
+            title: 'Easy-to-use',
+            content: 'Get up and running in no time with a seamless out-of-the-box experience.',
           },
         ]}
       </Block>
