@@ -1,4 +1,4 @@
-# What & why
+# Getting started
 
 React Native Modalfy concept came from a need we felt at [colorfy](https://colorfy.me). Some of our apps required a very specific use of modals, with sometimes the need to display and hide a lot of them. Another requirement we had was to be able to fine-tune the animations.
 

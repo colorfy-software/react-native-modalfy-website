@@ -1,6 +1,6 @@
 # Table of contents
 
-* [What & why](README.md)
+* [Getting started](README.md)
 * [Installation](installation.md)
 * [Guides](guides/README.md)
   * [Creating a stack](guides/stack.md)
