@@ -13,7 +13,7 @@ Every modal component you added in your modal stack \(see [`createModalStack`](c
   * `getParams`: get a specific modal params with fallback
   * `params`: current modal's params
 
-Be aware that only components in you modal stack do receive this prop. If you're looking for how to access the `modal` prop from any component, head to [`withModal`](with-modal.md) section.
+Be aware that only components in you modal stack do receive this prop. If you're looking for how to access the `modal` prop from any component, head to [`withModal`](with-modal.md)/[`useModal`](usemodal.md) sections.
 
 ## API reference
 
@@ -155,6 +155,6 @@ export default WelcomeBackModal
 This is the other way to access a modal's params. Here you'll directly have access to the data you passed.
 
 {% hint style="info" %}
-Note: If you're outside a modal component \(aka you used `withModal`\) you won't have any `params` key in `this.props.modal`. Prefer using `getParams` if you really need that info.
+Note: If you're outside a modal component \(aka you used `withModal/useModal`\) you won't have any `params` key in `this.props.modal`. Prefer using `getParams` if you really need that info.
 {% endhint %}
 
