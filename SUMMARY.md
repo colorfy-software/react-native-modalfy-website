@@ -14,7 +14,7 @@
   * [useModal](api/usemodal.md)
 * [Help](help.md)
 * [Contributing](contributing.md)
-* [Changelog](https://github.com/colorfy-software/react-native-modalfy/releases)
+* [Github](https://github.com/colorfy-software/react-native-modalfy)
 
 ## Blog
 
