@@ -54,6 +54,7 @@ This use case is probably more common than the 1st one: you're in a screen compo
 ```javascript
 import React from 'react'
 import { Button, Text, View } from 'react-native'
+import { withModal } from 'react-native-modalfy'
 
 import { sendFakeMessage } from '@utils'
 
@@ -76,7 +77,7 @@ class Message extends React.Component {
   }
 }
 
-export default Message
+export default withModal(Message)
 ```
 
 {% hint style="info" %}
