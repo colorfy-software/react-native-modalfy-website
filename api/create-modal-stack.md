@@ -97,7 +97,7 @@ type transitionOptions = Animated.AnimatedValue => {
 }
 ```
 
-Set transitions based on the animated value React Native Modalfy uses under the hood. Based on the animated value you'll receive you'll be able to setup custom interpolations that will be apply to your `modal` component.
+Set transitions based on the animated value React Native Modalfy uses under the hood. Based on the animated value you'll receive you'll be able to setup custom interpolations that will be applied to your `modal` component.
 
 Note that **the** `inputRange` **corresponds to the modal position in your stack**! `0` will translate to _"the modal is not rendered"_, `1` to _"this modal is on top of the stack/the only item in the stack"_, `2` to _"this modal is the 2nd item in the stack"_, etc. Coupled with [`animateInConfig`](create-modal-stack.md#animateinconfig) & [`animateOutConfig`](create-modal-stack.md#animateoutconfig), you really have a fine-grained control over your modals animation states! Check out [our examples](https://github.com/colorfy-software/react-native-modalfy/tree/master/examples) to see what's possible with React Native Modalfy.
 
