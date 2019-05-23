@@ -5,7 +5,7 @@ React Native Modalfy concept came from a need we felt at [colorfy](https://color
 Unfortunately after trying some great alternatives like [React Native's own Modal](https://facebook.github.io/react-native/docs/modal#docsNav) or [React Native Community's Modal](https://github.com/react-native-community/react-native-modal), they didn't really fit our needs; as we ended up with really long files for screens where the "modals logic" was getting complex. That motivated us to opt for a "_compile time focused_" API. 
 
 {% hint style="info" %}
-After reading this documentation you'll realize that [React Navigation](https://reactnavigation.org) has been our main source of inspiration for it. 
+After reading this documentation you'll realize that [React Navigation](https://reactnavigation.org) has been our main source of inspiration for it. Huge props to all the contributors for its simple and yet performant API!
 {% endhint %}
 
 If you think about it: modals are simply another form of "navigation between screens". React Navigation being the navigation library we use at colorfy \(and incidentally one of the most used React Native navigation libraries\), taking inspiration from there API looked like a good choice.
