@@ -7,11 +7,11 @@ title: Modal prop reference
 Every modal component you added in your modal stack \(see [`createModalStack`](create-modal-stack.md)\) receives the `modal` prop automatically:
 
 * `this.props.modal`
-  * `currentModal`: name of the current displayed modal if there's one
-  * `openModal`: open a specific modal
-  * `closeModal`: close a modal
-  * `getParams`: get a specific modal params with fallback
-  * `params`: current modal's params
+  * [`currentModal`](https://colorfy-software.gitbook.io/react-native-modalfy/api/modal-prop#currentmodal-get-the-currently-displayed-modals-name): name of the current displayed modal if there's one
+  * [`openModal`](https://colorfy-software.gitbook.io/react-native-modalfy/api/modal-prop#openmodal-open-a-modal): open a specific modal
+  * [`closeModal`](https://colorfy-software.gitbook.io/react-native-modalfy/api/modal-prop#closemodal-close-a-modal): close a modal
+  * [`getParams`](https://colorfy-software.gitbook.io/react-native-modalfy/api/modal-prop#getparams-get-a-specific-modal-params): get a specific modal params with fallback
+  * [`params`](https://colorfy-software.gitbook.io/react-native-modalfy/api/modal-prop#params-current-modals-params): current modal's params
 
 Be aware that only components in you modal stack do receive this prop. If you're looking for how to access the `modal` prop from any component, head to [`withModal`](with-modal.md)/[`useModal`](usemodal.md) sections.
 
