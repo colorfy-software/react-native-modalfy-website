@@ -27,14 +27,16 @@ export default ProfileScreen
 
 Using `useModal` will give you access to an object containing:
 
-* `currentModal`: name of the current displayed modal if there's one
-* `openModal`: open a specific modal
-* `closeModal`: close a modal
-* `getParams`: get a specific modal params with fallback
+* `this.props.modal`
+  * `currentModal`: name of the current displayed modal if there's one
+  * `openModal`: open a specific modal
+  * `closeModal`: close a modal
+  * `closeModals`: close every instance of a given modal
+  * `closeAllModals`: close all opened modals
 
 as seen in [Modal prop](modal-prop.md#api-reference).
 
-{% hint style="info" %}
+{% hint style="danger" %}
 Note: Hooks require React 16.8.0+ which means you'll need to be on React Native 0.59.0+ for `useModal`.
 {% endhint %}
 

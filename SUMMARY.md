@@ -6,6 +6,7 @@
   * [Creating a stack](guides/stack.md)
   * [Opening & closing](guides/usage.md)
   * [Passing params](guides/params.md)
+  * [Subscribing to events](guides/subscribing-to-events.md)
 * [API](api/README.md)
   * [Modal prop](api/modal-prop.md)
   * [ModalProvider](api/modal-provider.md)
@@ -15,8 +16,4 @@
 * [Help](help.md)
 * [Contributing](contributing.md)
 * [Github](https://github.com/colorfy-software/react-native-modalfy)
-
-## Blog
-
-* [Introducing a Modal Citizen](blog/introducing-a-modal-citizen.md)
 

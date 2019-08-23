@@ -36,7 +36,8 @@ Using `withModal` will give you access to:
   * `currentModal`: name of the current displayed modal if there's one
   * `openModal`: open a specific modal
   * `closeModal`: close a modal
-  * `getParams`: get a specific modal params with fallback
+  * `closeModals`: close every instance of a given modal
+  * `closeAllModals`: close all opened modals
 
 as seen in [Modal prop](modal-prop.md#api-reference).
 

@@ -31,7 +31,3 @@ class ErrorModal extends React.Component {
 export default ErrorModal
 ```
 
-You also have access to `modal.getParams` you can use as so: `modal.getParams(modalName, defaultValue)`, with the `defaultValue` being optional. However, you'll mainly use `params` given that you have it at your disposal directly inside your component props.
-
-`modal.getParams` is mainly meant to be used inside a component you enhanced via `withModal`/ `useModal`, so that you could have access to a modal params outside of its component.
-

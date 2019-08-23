@@ -28,6 +28,6 @@ export default App
 The only prop the component expects is `stack`, covered in [`createModalStack`](create-modal-stack.md).
 
 {% hint style="info" %}
-Note: `ModalProvider` wraps its `children` inside a `View` component so feel free to put as many siblings as you want inside of it \(no need to wrap them inside a `View` before passing the content to `ModalProvider`\).
+Note: `ModalProvider` wraps its `children` inside a `View` component so feel free to put as many siblings as you want inside of it \(no need to wrap them inside a `View/Fragment` before passing the content to `ModalProvider`\).
 {% endhint %}
 
