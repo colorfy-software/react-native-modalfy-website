@@ -16,6 +16,7 @@ import { Button, Text, View } from 'react-native'
 
 class ErrorModal extends React.Component {
   render() {
+    const { modal: { closeModal } } = this.props
     return (
       <View>
         <Text>An error occured!</Text>
