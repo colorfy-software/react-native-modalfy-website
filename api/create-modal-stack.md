@@ -30,6 +30,9 @@ createModalStack({
       easing: Easing.inOut(Easing.exp),
       duration: 900,
     },
+    containerStyle: {
+      backgroundColor: 'rebeccapurple',
+    },
     position: 'bottom',
     transitionOptions: animatedValue => ({
       transform: [
@@ -70,6 +73,14 @@ type animateOutConfig = Animated.TimingAnimationConfig
 ```
 
 Animation out configuration object \(only `easing` and `duration`\). Defaults to: `animateOutConfig: { easing: Easing.inOut(Easing.exp), duration: 450 }`.
+
+#### `containerStyle`
+
+```text
+type containerStyle = ViewStyle
+```
+
+Styles applied to the `View` wrapping your modal component \(if defined via `Config`\) or all of them \(if defined via `Options`\).
 
 #### `modal`
 
