@@ -48,7 +48,7 @@ const modalConfig = {
 
 we can call `openModal('NoConnection')`, `openModal('MessageSent')`, etc.
 
-## From anywhere in your code
+## From anywhere else in the code
 
 This use case is probably more common than the 1st one: you're in a screen component and you want to open a modal from there. To do so, we'll use [`withModal`](../api/with-modal.md) higher-order component \(or [`useModal`](../api/usemodal.md) hook\) to access the same `modal` we just saw:
 

@@ -7,6 +7,7 @@
   * [Opening & closing](guides/usage.md)
   * [Passing params](guides/params.md)
   * [Subscribing to events](guides/subscribing-to-events.md)
+  * [Type checking with TypeScript/Flow](guides/type-checking-with-typescript-flow.md)
 * [API](api/README.md)
   * [Modal prop](api/modal-prop.md)
   * [ModalProvider](api/modal-provider.md)
