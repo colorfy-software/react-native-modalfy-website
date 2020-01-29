@@ -67,11 +67,11 @@ export default Message
 ### `closeModal` - close a modal
 
 ```javascript
-// type CloseModal = () => void,
+// type CloseModal = (modalName?: string) => void,
 const { closeModal }  = this.props.modal
 ```
 
-This functions closes a modal. Depending on your modal stack configuration it will either: close the first modal in your stack or clear the whole stack \(see [createModalStack](create-modal-stack.md)\).
+This function closes a modal. Depending on your modal stack configuration it will either: close the first modal in your stack or clear the whole stack \(see [createModalStack](create-modal-stack.md)\).
 
 ```javascript
 import React from 'react'
@@ -125,11 +125,11 @@ export default ErrorModal
 ### `closeAllModals` - close all opened modals
 
 ```javascript
-// type CloseModal = () => void,
-const { closeModal }  = this.props.modal
+// type CloseAllModal = () => void,
+const { closeAllModals }  = this.props.modal
 ```
 
-This functions closes a modal. Depending on your modal stack configuration it will either: close the first modal in your stack or clear the whole stack \(see [createModalStack](create-modal-stack.md)\).
+This function will close every single opened modal, clearing the whole stack.
 
 ```javascript
 import React from 'react'
@@ -137,11 +137,11 @@ import { Button, Text, View } from 'react-native'
 
 class ErrorModal extends React.Component {
   render() {
-    const { closeModal } = this.props.modal
+    const { closeAllModals } = this.props.modal
     return (
       <View>
         <Text>An error occured!</Text>
-        <Button onPress={closeModal} title="OK" />
+        <Button onPress={closeAllModals} title="OK" />
       </View>
     )
   }
