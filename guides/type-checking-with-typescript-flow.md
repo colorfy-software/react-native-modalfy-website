@@ -90,7 +90,3 @@ class MyModalComponent extends React.Component<Props> {
 export default MyModalComponent
 ```
 
-{% hint style="info" %}
-Note: In `createModalStack` case, you can type the 2 arguments if you want to, through `ModalStackConfig` and `ModalStackOptions`.
-{% endhint %}
-
