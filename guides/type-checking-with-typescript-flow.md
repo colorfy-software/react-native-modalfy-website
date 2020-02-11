@@ -63,3 +63,34 @@ Note: There's no need to do this if you're using the `useModal` hook as the libr
 Note: We're using a different interface here as `withModal` do not give you access to the exact same `modal` prop as the one from within a modal component. Feel free to have a look at the [declaration file](https://github.com/colorfy-software/react-native-modalfy/blob/master/index.d.ts#L181-L207) if needed.
 {% endhint %}
 
+## Type checking `static modalOptions`
+
+Besides the default modal options passed to `createModalStack()`, another way to define a modal's options is to used `static modalOptions` if you're inside a class. Its type is also provided as so:
+
+```typescript
+import React from 'react'
+import { ModalStackItemProp, ModalStackOptions } from 'react-native-modalfy'
+
+interface Props {
+  modal: ModalStackItemProp
+}
+
+class MyModalComponent extends React.Component<Props> {
+ static modalOptions: ModalStackOptions = {
+    containerStyle: {
+      borderWidth: 5,
+      borderColor: 'rebeccapurple'
+    },
+  }
+  
+  // ...
+}
+
+
+export default MyModalComponent
+```
+
+{% hint style="info" %}
+Note: In `createModalStack` case, you can type the 2 arguments if you want to, through `ModalStackConfig` and `ModalStackOptions`.
+{% endhint %}
+

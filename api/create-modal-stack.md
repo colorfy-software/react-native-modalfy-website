@@ -133,9 +133,6 @@ The modal options is an object in which you'll setup options that'll be share am
     backdropOpacity: 0.9,
     backButtonBehavior: 'clear',
     position: 'bottom',
-    containerStyle: {
-      backgroundColor: 'rebeccapurple',
-    },
     transitionOptions: animatedValue => ({
       transform: [
         {
