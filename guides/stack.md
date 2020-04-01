@@ -96,7 +96,7 @@ export default App
 In this example, `ErrorModal` is a regular React component we're using as our 1st modal. React Native Modalfy will register it under the key `'ErrorModal'`. Given we're working with normal JavaScript objects here, you can change that key by simply changing the `modalConfig` key, ie: `const modalConfig = { MyCustomErrorModalName: ErrorModal }`.
 
 {% hint style="info" %}
-We only covered the simplest way of setting up your modal stack here. Feel free to check out the [createModalStack](https://github.com/colorfy-software/react-native-modalfy-website/tree/ba1aacf00d590bad4c078b8a776e82da019b2201/guides/create-modal-stack.md) API reference to have more in-depth explanations of `createModalStack` mechanics.
+We only covered the simplest way of setting up your modal stack here. Feel free to check out the [createModalStack](../api/create-modal-stack.md) API reference to have more in-depth explanations of `createModalStack` mechanics.
 {% endhint %}
 
 From here you'll finally have a fully functional modal system, ready to be used and we'll see how in the following section.
