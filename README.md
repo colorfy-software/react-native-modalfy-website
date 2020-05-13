@@ -16,7 +16,7 @@ Note: Given that React Native Modalfy uses the new React Context API added in Re
 
 ## Try it now
 
-If you want to play with the library by yourself before coming back here, there is a demo app [available on Expo](https://snack.expo.io/@charles.m/react-native-modalfy):
+If you want to experience the library by yourself and then come back afterwards, there is a demo app [available on Expo](https://snack.expo.io/@charles.m/react-native-modalfy):
 
 ![](.gitbook/assets/screenshot-2020-05-13-at-12.21.45.png)
 
