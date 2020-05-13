@@ -14,3 +14,11 @@ If you think about it: modals are simply another form of "navigation between scr
 Note: Given that React Native Modalfy uses the new React Context API added in React 16.3.0 \([but you should use v16.3.1+](https://twitter.com/dan_abramov/status/981333357874196482)\), we'll require you to use at least `react-native@^0.55.0`.
 {% endhint %}
 
+## Try it now
+
+If you want to play with the library by yourself before coming back here, there is a demo app [available on Expo](https://snack.expo.io/@charles.m/react-native-modalfy):
+
+![](.gitbook/assets/screenshot-2020-05-13-at-12.21.45.png)
+
+
+
