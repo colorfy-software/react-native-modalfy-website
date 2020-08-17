@@ -21,7 +21,17 @@ export interface ModalOptions {
 
   animateInConfig?: Pick<Animated.TimingAnimationConfig, 'duration' | 'easing'>
   
+  animationIn?: (
+    animatedValue: Animated.Value,
+    toValue: number,
+  ) => Animated.CompositeAnimation | void
+  
   animateOutConfig?: Pick<Animated.TimingAnimationConfig, 'duration' | 'easing'>
+  
+  animationOut?: (
+    animatedValue: Animated.Value,
+    toValue: number,
+  ) => Animated.CompositeAnimation | void
   
   backBehavior?: 'clear' | 'pop' | 'none'
   
@@ -72,11 +82,47 @@ export type ModalTransitionValue =
 animateInConfig?: Pick<Animated.TimingAnimationConfig, 'duration' | 'easing'>
 ```
 
-Animation configuration used to animate a modal in, at the top of the stack. 
+Animation configuration used to animate a modal in, at the top of the stack. It uses `Animated.timing()` so if you want to use another animation type, see `animationIn`. 
 
 **Note:** only `easing` and `duration` are needed.
 
 **Default:**  `{ easing: Easing.inOut(Easing.exp), duration: 450 }`
+
+### `animationIn`
+
+```typescript
+animationIn?: (
+  animatedValue: Animated.Value,
+  toValue: number,
+) => Animated.CompositeAnimation | void
+```
+
+Function that receives the `animatedValue` used by the library to animate the modal opening, and a `toValue` argument representing the modal position in the stack. Useful to implement your own animation [type](https://reactnative.dev/docs/animated#configuring-animations) and/or [composition](https://reactnative.dev/docs/animated#composing-animations) functions.
+
+**Note:** If you just want to use `Animated.timing()`, check `animateInConfig`.
+
+**Default:** -
+
+**Example:**
+
+```typescript
+animationIn: (modalAnimatedValue, modalToValue) => {
+  Animated.parallel([
+    Animated.timing(modalAnimatedValue, {
+      toValue: modalToValue,
+      duration: 300,
+      easing: Easing.inOut(Easing.exp),
+      useNativeDriver: true,
+    }),
+    Animated.timing(myOtherAnimatedValue, {
+      toValue: 1,
+      duration: 300,
+      easing: Easing.inOut(Easing.exp),
+      useNativeDriver: true,
+    }),
+  ]).start()
+}
+```
 
 ### `animateOutConfig`
 
@@ -89,6 +135,42 @@ Animation configuration used to animate a modal out \(underneath other modals or
 **Note:** only `easing` and `duration` are needed.
 
 **Default:**  `{ easing: Easing.inOut(Easing.exp), duration: 450 }`
+
+### `animationOut`
+
+```typescript
+animationOut?: (
+  animatedValue: Animated.Value,
+  toValue: number,
+) => Animated.CompositeAnimation | void
+```
+
+Function that receives the `animatedValue` used by the library to animate the modal closing, and a `toValue` argument representing the modal position in the stack. Useful to implement your own animation [type](https://reactnative.dev/docs/animated#configuring-animations) and/or [composition](https://reactnative.dev/docs/animated#composing-animations) functions.
+
+**Note:** If you just want to use `Animated.timing()`, check `animateOutConfig`.
+
+**Default:** -
+
+**Example:**
+
+```typescript
+animationOut: (modalAnimatedValue, modalToValue) => {
+  Animated.parallel([
+    Animated.timing(modalAnimatedValue, {
+      toValue: modalToValue,
+      duration: 300,
+      easing: Easing.inOut(Easing.exp),
+      useNativeDriver: true,
+    }),
+    Animated.timing(myOtherAnimatedValue, {
+      toValue: 1,
+      duration: 300,
+      easing: Easing.inOut(Easing.exp),
+      useNativeDriver: true,
+    }),
+  ]).start()
+}
+```
 
 ### `backBehavior`
 
