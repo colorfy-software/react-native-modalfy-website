@@ -31,7 +31,10 @@ const createModalStack = (
 
 {% code title="./App.js" %}
 ```typescript
+import { Dimensions } from 'react-native'
 import { PokedexEntryModal } from './modals/PokedexEntryModal'
+
+const { height } = Dimensions.get('window')
 
 createModalStack({ PokedexEntryModal }, {
   animateInConfig: {
@@ -54,7 +57,7 @@ createModalStack({ PokedexEntryModal }, {
       {
         translateY: animatedValue.interpolate({
           inputRange: [0, 1, 2],
-          outputRange: [vh, 0, 0],
+          outputRange: [height, 0, 0],
         }),
       },
       {
