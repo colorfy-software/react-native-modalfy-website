@@ -77,9 +77,11 @@ No need to use these 2 interfaces as `createModalStack()`is already doing it und
 
 This interface allows you to type check the `modal` prop that your regular component will get access to by using `withModal()` HOC. This means that you'll have to keep a few things in mind:
 
+{% hint style="danger" %}
 * If you're inside a modal component and not a "regular" component, you should use `ModalComponentProp` instead.
-* If you're using `useModal()` Hook, no need to employ `ModalProp` as the Hook itself will take care of all the typing.
+* If you're using `useModal()` Hook, no need to employ`ModalProp`as the Hook itself will take care of all the typing. Simply provide your params interface as such `useModal<ModalStackParams>()`\(explained below\).
 * The main and potentially only use case for `ModalProp` then is when you're using a Class component
+{% endhint %}
 
 Now that we've covered the gotchas, let's see `ModalProp` in action. In this example, we created a `<PokedexCard>` component that's will open a modal with the full details about a specific Pokemon, with its name, type and entry number in the [Pokédex](https://www.pokemon.com/pokedex):
 
@@ -173,7 +175,7 @@ You'd also realize that we didn't pass `ModalStackParams` as a generic to `withM
 This interface works on the same principles as `ModalProp` with just some key differences to keep in mind. The first and most important is that:
 
 {% hint style="danger" %}
- `ModalComponentProp` **should only be used with modal components!**
+ `ModalComponentProp` **should only be used with modal components \(rendered by Modalfy\)!**
 {% endhint %}
 
  ****If the component you're working on is not rendered by Modalfy directly/part of your `createModalStack()` config, you should use `ModalProp` instead.
@@ -292,6 +294,10 @@ Please check out the [**ModalComponentProp**](../api/types/modalcomponentprop.md
 
 #### \*\*\*\*[**&gt; ModalComponentWithOptions API**](../api/types/modalcomponentwithoptions.md)\*\*\*\*
 
+{% hint style="danger" %}
+`ModalComponentWithOptions` **is only meant to be used with Hooks modal components**. ****If you're working with classes, simply use the ****static`modalOptions`property as explained below.
+{% endhint %}
+
 As we saw in the [**Configuring a stack**](stack.md#configuring-the-stack) guide, you have 3 different ways to provide options to a modal. While the first 2 are type-checked during the modal stack creation, only the 3rd one involves typing `modalOptions` from within the modal component itself. 
 
 To do so, simply pass your component props to `ModalComponentWithOptions` and you're done! The interface will also directly take care of the fact that you're using it on a component, so no need to use `React.FC` with it. ie:
@@ -330,11 +336,7 @@ export default PokedexEntryModal
 {% endtab %}
 {% endtabs %}
 
-{% hint style="danger" %}
-`ModalComponentWithOptions` **is only meant to be used with Hooks modal components**.
-{% endhint %}
-
-If you're working with a class, you'll just have to directly type the static `modalOptions` property with the same`ModalOptions` we used to type our modal stack. ie:
+If you're working with a class, you'll just have to directly type the static`modalOptions`property with the same`ModalOptions`we used to type our modal stack. ie:
 
 {% tabs %}
 {% tab title="TypeScript" %}
