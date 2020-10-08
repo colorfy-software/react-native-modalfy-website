@@ -12,7 +12,7 @@ There are **6** main interfaces that you'll use throughout your experience with 
 * **ModalComponentProp** - Interface of the `modal` prop exposed by the library \(specifically for modal components\).
 * **ModalComponentWithOptions** - Interface that adds type support of the `modalOptions` property \(specifically for Hooks modal components\).
 
-The 6th and last main interface will actually be provided **by you**, as Modalfy v2 finally brings support for modal params type. That interface is going  to be used mainly by [**ModalProp**](../api/types/modalprop.md) , [**ModalComponentProp**](../api/types/modalcomponentprop.md) and [**modalfy\(\)**](../api/modalfy.md). But for now: let's see how to use the other interfaces we just mentioned.
+The 6th and last main interface will actually be provided **by you**, as Modalfy v2 finally brings support for modal params type. That interface is going to be used mainly by [**ModalProp**](../api/types/modalprop.md) , [**ModalComponentProp**](../api/types/modalcomponentprop.md) and [**modalfy\(\)**](../api/modalfy.md). But for now: let's see how to use the other interfaces we just mentioned.
 
 {% hint style="info" %}
 Please refer to the [**Types**](../api/types/) section of the API reference to get a complete overview of each of these interfaces.
