@@ -24,7 +24,7 @@ Please refer to the [**Types**](../api/types/) section of the API reference to g
 
 #### \*\*\*\*[**&gt; ModalOptions API**](../api/types/modaloptions.md)\*\*\*\*
 
-The interfaces should be the one you use the less. They're the ones that will ensure the type safety of the 2 arguments  `createModalStack()` expects. So if we were to reuse the same initial example we say in the [**Creating a stack section**](stack.md), we'd now have:
+The interfaces should be the one you use the less. They're the ones that will ensure the type safety of the 2 arguments `createModalStack()` You remember about 6th, modal params, interface? That's exactly what we have  expects. So if we were to reuse the same initial example we say in the [**Creating a stack section**](stack.md), we'd now have:
 
 {% tabs %}
 {% tab title="TypeScript" %}
@@ -78,15 +78,15 @@ No need to use these 2 interfaces as `createModalStack()`is already doing it und
 This interface allows you to type check the `modal` prop that your regular component will get access to by using `withModal()` HOC. This means that you'll have to keep a few things in mind:
 
 {% hint style="danger" %}
-* If you're inside a modal component and not a "regular" component, you should use `ModalComponentProp` instead.
-* If you're using `useModal()` Hook, no need to employ`ModalProp`as the Hook itself will take care of all the typing. Simply provide your params interface as such `useModal<ModalStackParams>()`\(explained below\).
-* The main and potentially only use case for `ModalProp` then is when you're using a Class component
+* If you're inside **a modal component and not a "regular" component,** you should use **`ModalComponentProp` instead**.
+* If you're using **`useModal()` Hook,** no need to employ`ModalProp`**a**s the Hook itself will take care of all the typing. **Simply provide your params interface to the Hook as such `useModal<ModalStackParams>()`**\(explained below\)**.**
+* The main and potentially **only use case for** `ModalProp` **then is when you're using a Class component**
 {% endhint %}
 
 Now that we've covered the gotchas, let's see `ModalProp` in action. In this example, we created a `<PokedexCard>` component that's will open a modal with the full details about a specific Pokemon, with its name, type and entry number in the [Pokédex](https://www.pokemon.com/pokedex):
 
 {% tabs %}
-{% tab title="TypeScript" %}
+{% tab title="Class" %}
 {% code title="./components/PokedexCard.tsx" %}
 ```typescript
 import React from 'react'
@@ -134,11 +134,19 @@ export default withModal(PokedexCard)
 ```
 {% endcode %}
 {% endtab %}
+
+{% tab title="Hooks" %}
+```
+// ❌ Don't use ModalProp with the useModal() Hook. If you want to fully type it
+// simply proviede your params interface as such: useModal<ModalStackParams>() 
+// (ModalStackParams is explained below).
+```
+{% endtab %}
 {% endtabs %}
 
 Lots of things are happening in this snippet, but if you're already familiar with [TypeScript generics](https://www.typescriptlang.org/docs/handbook/generics.html), this should get you excited! Let's dissect this snippet.
 
-You remember about 6th, modal params, interface? That's exact what we have  `L#5` with `ModalStackParams`. It's an interface you'll have to build that will to represent the complete tree of your modals and the types their params are expecting. 
+`L#5` with `ModalStackParams`. It's an interface you'll have to build that will to represent the complete tree of your modals and the types their params are expecting. 
 
 From `L#7` to `L#11`, we're letting TypeScript know that  `<PokedexCard>` expects 3 props that should comply with the types specified in `ModalStackParams`. We're doing this to ensure the type safety of these 3 props because we're using them `L#24` to open `'PokedexEntryModal'` and pass them as params.
 
@@ -162,7 +170,7 @@ interface ModalStackParams {
 You can have a look at the Example provided [in the repository](https://github.com/colorfy-software/react-native-modalfy/tree/master/Example) and available [on Expo](https://snack.expo.io/@charles.m/react-native-modalfy) to see what `ModalStackParams`could look like/be used in a real-world scenario.
 {% endhint %}
 
-You'd also realize that we didn't pass `ModalStackParams` as a generic to `withModal()` `L#42`, instead we directly provided it to `React.Component` `L#15`, via `Props` created `L#13`. As you may know, in TypeScript, `React.Component` is a [generic class](https://www.typescriptlang.org/docs/handbook/generics.html#generic-classes) that accepts up to 2 arguments: `React.Component<Props, State>`. That's why `ModalProp` also accepts up to 2 arguments, your params interface and your component props and returns a type with your props type + the new `modal` prop. There a few things to notice here:
+You'd also realize that we didn't pass `ModalStackParams` as a generic to `withModal()` `L#42`, instead, we directly provided it to `React.Component` `L#15`, via `Props` created `L#13`. As you may know, in TypeScript, `React.Component` is a [generic class](https://www.typescriptlang.org/docs/handbook/generics.html#generic-classes) that accepts up to 2 arguments: `React.Component<Props, State>`. That's why `ModalProp` also accepts up to 2 arguments, your params interface and your component props and returns a type with your props type + the new `modal` prop. There a few things to notice here:
 
 * If you have any `State` interface, you'll have to provide it to `React.Component` as a second argument, not `ModalProp`.
 * If your component doesn't expect any props, you don't have to provide a second argument to `ModalProp`. If you want, you can even use it without providing the params type. This means that the most basic way of using `ModalProp` is `class PokedexCard extends React.Component<ModalProp>`
@@ -172,7 +180,7 @@ You'd also realize that we didn't pass `ModalStackParams` as a generic to `withM
 
 #### \*\*\*\*[**&gt; ModalComponentProp API**](../api/types/modalcomponentprop.md)
 
-This interface works on the same principles as `ModalProp` with just some key differences to keep in mind. The first and most important is that:
+This interface works on the same principles as `ModalProp` with just some key differences to keep in mind. The first and most important is:
 
 {% hint style="danger" %}
  `ModalComponentProp` **should only be used with modal components \(rendered by Modalfy\)!**
@@ -197,7 +205,7 @@ type Props = ModalComponentProp<
   'PokedexEntryModal',
 >
 
-const PokedexEntryModal: React.FC<Props> = () => {
+const PokedexEntryModal: Props = () => {
   return (
     // ...
   )
@@ -251,7 +259,7 @@ type Props = ModalComponentProp<
 Although you'll never manually render `<PokedexEntryModal>`yourself, `ModalComponentProp` voluntarily expects props types as its second argument as your modal component could be getting props from some HOCs. ie:
 
 {% tabs %}
-{% tab title="TypeScript" %}
+{% tab title="Class" %}
 {% code title="./modals/PokedexEntryModal.tsx" %}
 ```typescript
 // ...
@@ -303,7 +311,7 @@ As we saw in the [**Configuring a stack**](stack.md#configuring-the-stack) guide
 To do so, simply pass your component props to `ModalComponentWithOptions` and you're done! The interface will also directly take care of the fact that you're using it on a component, so no need to use `React.FC` with it. ie:
 
 {% tabs %}
-{% tab title="TypeScript" %}
+{% tab title="Hooks" %}
 {% code title="./modals/PokedexEntryModal.tsx" %}
 ```typescript
 import React from 'react'
@@ -339,7 +347,7 @@ export default PokedexEntryModal
 If you're working with a class, you'll just have to directly type the static`modalOptions`property with the same`ModalOptions`we used to type our modal stack. ie:
 
 {% tabs %}
-{% tab title="TypeScript" %}
+{% tab title="Class" %}
 {% code title="./modals/PokedexEntryModal.tsx" %}
 ```typescript
 import React from 'react'
