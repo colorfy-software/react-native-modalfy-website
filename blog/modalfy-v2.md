@@ -8,7 +8,7 @@ Exactly a year and a month ago we open-sourced React Native Modalfy. This was ou
 
 Quite a few commits later, we're proud to introduce Modalfy v2, completely rewritten from the ground-up with Hooks & TypeScript at its core. This new version brings long time requested features that we couldn't implement with our previous architecture. Let's go briefly through what changed with Modalfy v2!
 
-## Sometimes we got to destroy, before we elevate
+## Sometimes we got to destroy before we elevate
 
 Modalfy promise has always been to allow you to do 3 things:
 
@@ -20,7 +20,7 @@ This trifecta is what motivated the creation of the library as we couldn't find 
 
 Our initial architecture was a good representation of what the React ecosystem looked like a year ago. We used React revamped Context API to expose a Context Provider that would render modals stored in the Provider state. This approach had several benefits. The main one was allowing us to keep up our promise by enabling modals stacking and invoking those modals from anywhere in the code using a component connected to the Context thanks to the [`withModal()`](../api/withmodal.md) HOC or [`useModal()`](../api/usemodal.md) Hooks.
 
-However, Modalfy started to face its limits when more advanced features were brought into discussion. At colorfy, our main issue quickly became the impossibility to use Modalfy outside of React. As we just saw, Modalfy v1 architecture relies entirely on React Context API. This meant that if we're not in a modal component or in a "normal" component using `withModal()`/`useModal()`, we're outside of React Context's area, so in other words: we can't interact with the modal stack anymore.
+However, Modalfy started to face its limits when more advanced features were brought into the discussion. At colorfy, our main issue quickly became the impossibility to use Modalfy outside of React. As we just saw, Modalfy v1 architecture relies entirely on React Context API. This meant that if we're not in a modal component or in a "normal" component using `withModal()`/`useModal()`, we're outside of React Context's area, so in other words: we can't interact with the modal stack anymore.
 
 One solution could have been to remove Context so that we wouldn't have to deal with its limitations. Unfortunately,  that wouldn't work in our case as we need it to render modals on top of everything in our apps. Given that we couldn't get rid of the whole thing, we focused our attention on the single piece of the puzzle that was blocking us: the state!
 
@@ -51,7 +51,7 @@ export default function(origin, error) {
 {% endtab %}
 {% endtabs %}
 
-As you can see in this little snippet, we can now interact with the same object `withModal()` and `useModal()` expose, but in plain JavaScript! In this example, for instance, we can use`logErrorWithModal(origin, error)`  to log any error to our debug console & Firebase's Crashlytics and open an `'ErrorModal'`, if we don't already have any modal open.
+As you can see in this little snippet, we can now interact with the same object `withModal()` and `useModal()` expose but in plain JavaScript! In this example, for instance, we can use`logErrorWithModal(origin, error)`  to log any error to our debug console & Firebase's Crashlytics and open an `'ErrorModal'`, if we don't already have any modal open.
 
 We're really excited about what this means as you'll now be able to provide an even better experience to your users. `modalfy()` opens the door to even more complex and sophisticated use cases and we can't wait to see what you'll be able to build with it!
 
@@ -67,11 +67,11 @@ The second and third changes are somewhat related: Modalfy finally supports glob
 
 Rebuilding the library allowed us to improve the existing and prepare for the upcoming. If you dive into the internals of Modalfy you'll realize that it's now based on Hooks, for instance. If you only focus on the externals, you'll discover that you can now customise your `backdropColor`, `backdropOpacity` & `backBehavior` per modal via [modalOptions](../guides/stack.md#configuring)!
 
-On top of that Modalfy v2 brings a long awaited feature with the fling gesture detection to close modals! Finally, the new [`modalfy.getParam()`](../guides/params.md) gives you a granular access to the params you pass to your modals.
+On top of that Modalfy v2 brings a long-awaited feature with the fling gesture detection to close modals! Finally, the new [`modalfy.getParam()`](../guides/params.md) gives you granular access to the params you pass to your modals.
 
 ## And much more!
 
 Please read the [changelog](https://github.com/colorfy-software/react-native-modalfy/releases/tag/v2.0.0) to have the complete list of what's different with Modalfy v2. If you're coming from Modalfy v1, check out the [Upgrading from v1.x](../guides/upgrading.md) guide.
 
-We've been working on this new version for quite a while now and couldn't more thrilled to finally be able to share it with you. Now it's your turn: give Modalfy v2 a try, if there is anything missing, not working or a feature you'd like to have: [please let us know](https://github.com/colorfy-software/react-native-modalfy/issues/new)!
+We've been working on this new version for quite a while now and couldn't be more thrilled to finally be able to share it with you. Now it's your turn: give Modalfy v2 a try, if there is anything missing, not working or a feature you'd like to have: [please let us know](https://github.com/colorfy-software/react-native-modalfy/issues/new)!
 
