@@ -68,7 +68,7 @@ If you directly provide the 2 objects instead of using variables like so:
 createModalStack({ ErrorModal }, { backdropOpacity: 0.6 })
 ```
 
-No need to use these 2 interfaces as `createModalStack()`is already doing it under the hood.
+No need to use these 2 interfaces as`createModalStack()`is already doing it under the hood.
 {% endhint %}
 
 ## ModalProp
