@@ -205,7 +205,7 @@ type Props = ModalComponentProp<
   'PokedexEntryModal',
 >
 
-const PokedexEntryModal: Props = () => {
+const PokedexEntryModal = (props: Props) => {
   return (
     // ...
   )
@@ -343,6 +343,10 @@ export default PokedexEntryModal
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+Notice how`ModalComponentWithOptions<Props>` is used right after the modal variable name, not inside the parenthesis of the arrow function!
+{% endhint %}
 
 If you're working with a class, you'll just have to directly type the static`modalOptions`property with the same`ModalOptions`we used to type our modal stack. ie:
 
