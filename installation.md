@@ -23,7 +23,7 @@ npm install --save react-native-modalfy
 {% endtab %}
 {% endtabs %}
 
-**2.**  Then you'll need to install and link [`react-native-gesture-handler`](https://docs.swmansion.com/react-native-gesture-handler/docs/getting-started.html#installation) to your project.
+**2.**  Then you'll need to install and link [`react-native-gesture-handler`](https://docs.swmansion.com/react-native-gesture-handler/docs/#installation) to your project.
 
 **3.** That's it! No further action required!
 
