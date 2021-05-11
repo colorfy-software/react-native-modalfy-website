@@ -18,7 +18,7 @@ yarn add react-native-modalfy
 
 {% tab title="npm" %}
 ```bash
-npm install --save react-native-modalfy use-memo-one
+npm install --save react-native-modalfy
 ```
 {% endtab %}
 {% endtabs %}
