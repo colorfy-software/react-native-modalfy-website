@@ -12,7 +12,7 @@ title: Installation
 {% tabs %}
 {% tab title="Yarn" %}
 ```
-yarn add react-native-modalfy use-memo-one
+yarn add react-native-modalfy
 ```
 {% endtab %}
 
@@ -27,16 +27,16 @@ npm install --save react-native-modalfy use-memo-one
 
 **3.** That's it! No further action required!
 
-Now you can move onto actually using the library through the modal stack.
+Now you can move on to actually using the library through the modal stack.
 
 ## Expo managed projects
 
-If you're using Expo, you'll only need to run this single command from the root of your projet:
+If you're using Expo, you'll only need to run this single command from the root of your project:
 
 {% tabs %}
 {% tab title="Bash" %}
 ```bash
-expo install react-native-modalfy react-native-gesture-handler use-memo-one
+expo install react-native-modalfy react-native-gesture-handler
 ```
 {% endtab %}
 {% endtabs %}
