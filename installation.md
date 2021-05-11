@@ -36,7 +36,7 @@ If you're using Expo, you'll only need to run this single command from the root 
 {% tabs %}
 {% tab title="Bash" %}
 ```bash
-expo install react-native-modalfy react-native-gesture-handler
+expo install react-native-modalfy react-native-gesture-handler use-memo-one
 ```
 {% endtab %}
 {% endtabs %}
