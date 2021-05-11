@@ -12,13 +12,13 @@ title: Installation
 {% tabs %}
 {% tab title="Yarn" %}
 ```
-yarn add react-native-modalfy
+yarn add react-native-modalfy use-memo-one
 ```
 {% endtab %}
 
 {% tab title="npm" %}
 ```bash
-npm install --save react-native-modalfy
+npm install --save react-native-modalfy use-memo-one
 ```
 {% endtab %}
 {% endtabs %}
